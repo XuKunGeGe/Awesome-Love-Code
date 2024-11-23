@@ -1,20 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
-    <!-- <meta http-equiv="refresh" content="0;url=http://all.91niubi.icu/Awesome-Love-Code/Web"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .loading-screen button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .loading-screen button:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            display: none;
+            flex-wrap: wrap; /* 允许内容换行 */
+            gap: 20px; /* 按钮之间的间距 */
+            justify-content: center; /* 水平居中 */
+            max-width: 600px; /* 限制总宽度，每行最多容纳5个 */
+        }
+
+        .icon {
+            flex: 1 1 calc(20% - 20px); /* 每个按钮占20%的宽度减去间距 */
+            max-width: calc(20% - 20px); /* 确保单个按钮不会超出20%宽度 */
+            width: 80px; /* 设置固定宽度 */
+            height: 100px; /* 设置固定高度 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 50%; /* 圆形 */
+            font-size: 14px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .icon:hover {
+            transform: scale(1.1); /* 鼠标悬停放大效果 */
+            background-color: #0056b3;
+        }
+
+        /* 响应式优化 */
+        @media (max-width: 768px) {
+            .icon {
+                flex: 1 1 calc(33.33% - 20px); /* 在较窄屏幕上调整为每行最多3个 */
+                max-width: calc(33.33% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .icon {
+                flex: 1 1 calc(50% - 20px); /* 在更窄屏幕上调整为每行最多2个 */
+                max-width: calc(50% - 20px);
+            }
+        }
+
+        #announcement {
+            color: red; /* 字体颜色变红 */
+            font-size: 32px; /* 增大字体 */
+            font-weight: bold; /* 字体加粗（可选） */
+            text-align: center; /* 居中对齐 */
+            margin: 20px 0; /* 添加上下间距 */
+        }
+        #announcement1 {
+            color: rgb(0, 0, 0); /* 字体颜色变红 */
+            
+            font-weight: bold; /* 字体加粗（可选） */
+            text-align: center; /* 居中对齐 */
+            margin: 20px 0; /* 添加上下间距 */
+        }
+
+        #announcement0 {
+            color: rgb(0, 0, 0); /* 字体颜色变红 */
+            text-align: center; /* 居中对齐 */
+            margin: 20px 0; /* 添加上下间距 */
+        }
+
+
+
+    </style>
 </head>
 <body>
-    <!-- <p>If you are not redirected automatically, follow this Web5 <a href="http://all.91niubi.icu/Awesome-Love-Code/Web/005" target="_blank">link</a>.</p> -->
-    <p>If you are not redirected automatically, follow this Web1 <a href="https://chat.chatgptplus.cn/" target="_blank">MrrioGPT-pool</a>.</p>
-    <p>If you are not redirected automatically, follow this Web2 <a href="https://gpt.github.cn.com/" target="_blank">MrrioGPT</a>.</p>
-    <p>If you are not redirected automatically, follow this Web3 <a href="https://sharewh2.xuexi365.com/share/c34edfb8-4f9a-4944-baa8-667b15495f7f?t=3" target="_blank">NoteBook-ChaoXing</a>.</p>
-    <p>If you are not redirected automatically, follow this Web4 <a href="https://kimi.moonshot.cn/" target="_blank">kimi</a>.</p>
-    <p>If you are not redirected automatically, follow this Web5 <a href="https://yiyan.baidu.com/" target="_blank">文心一言</a>.
-    <p>If you are not redirected automatically, follow this Web6 <a href="https://www.cloudflare.com/" target="_blank">CloudFlare</a>.</p>
-    <p>If you are not redirected automatically, follow this Web7 <a href="https://github.com/XuKunGeGe/Awesome-Love-Code" target="_blank">Github项目地址</a>.</p>
-</body>
-</html>
 
+    <!-- 加载页面 -->
+    <div class="loading-screen">
+        <p id="announcement">免责声明</p>
+        <p>所有资源，均旨在为广大学者和实践者提供一个开放共享的平台，以促进知识的传播和学术的交流，严禁用于商业</p>
+        <p>目的或其他未经许可的用途。我们强调，这些资源的提供是出于对学习的尊重和对知识共享的热忱，我们鼓励大家</p>
+        <p>秉持这一宗旨，共同维护一个健康、积极、富有成效的学习环境。</p>
+        <br>
+        <p id="announcement">声明</p>
+        <p id="announcement1">ANNOUNNCEMENT</p>
+        <p id="announcement0">本人拥护党和国家的方针政策，坚决反对切分裂国家行为自觉遵守严格落实《网</p>
+        <p id="announcement0">络信息内容生态治理规定》以营造清朗的网络空间，建设良好的网络生态为目标</p>
+        <p id="announcement0">反对法西斯主义，帝国主义，霸权主义，弘扬社会主义精神</p>
+        <br>
+        <p id="announcement">严正声明</p>
+        <p>本人忠于中华人民共和国宪法维护宪法权威，履行法定职责，忠于祖国、忠于人民恪尽职守、廉洁奉公，接受人民</p>
+        <p>监督，为建设富强民主文明和谐，美丽的社会主义现代化强国努力奋斗坚决反对历史虚无主义，拥护中国特色社会/p>
+        <p>主义，坚持社会主义核心价值观，习近平新时代中国特色社会主义思想，尊重先驱伟人，向先烈致敬</p>
+        
+        <div style="text-align: center;">
+            <button onclick="enterWebsite()" style="align-content: center;">确认并进入</button>
+        </div>
+        
+    </div>
+
+
+    <!-- 主内容页面 -->
+    <div class="container">
+        <a href="https://chat.chatgptplus.cn/" target="_blank" class="icon">MrrioGPT<br>Pool</a>
+        <a href="https://gpt.github.cn.com/" target="_blank" class="icon">MrrioGPT</a>
+        <a href="https://sharewh2.xuexi365.com/share/c34edfb8-4f9a-4944-baa8-667b15495f7f?t=3" target="_blank" class="icon">NoteBook<br>ChaoXing</a>
+        <a href="https://kimi.moonshot.cn/" target="_blank" class="icon">Kimi</a>
+        <a href="https://yiyan.baidu.com/" target="_blank" class="icon">文心<br>一言</a>
+        <a href="https://www.cloudflare.com/" target="_blank" class="icon">CloudFlare</a>
+        <a href="https://chatgpt.com" target="_blank" class="icon">ChatGPT<br>官网</a>
+        <a href="https://github.com/XuKunGeGe/Awesome-Love-Code" target="_blank" class="icon">Github<br>项目</a>
+        <a href="https://github.com/XuKunGeGe/Awesome-Love-Code" target="_blank" class="icon">Github<br>项目</a>
+        <a href="https://github.com/XuKunGeGe/Awesome-Love-Code" target="_blank" class="icon">Github<br>项目</a>
+    </div>
+
+    <script>
+        function enterWebsite() {
+            document.querySelector('.loading-screen').style.display = 'none'; // 隐藏加载页面
+            document.querySelector('.container').style.display = 'flex'; // 显示主页面内容
+        }
+    </script>
+
+
+
+
+</body></html>
